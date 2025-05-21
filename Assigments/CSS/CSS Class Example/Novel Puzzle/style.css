@@ -1,0 +1,13 @@
+.first-word {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.first-letter {
+  font-size: 70px;
+  float: left;
+  line-height: 1;
+  padding-right: 8px;   
+  color: darkred;
+  font-family: 'Georgia', serif;
+}

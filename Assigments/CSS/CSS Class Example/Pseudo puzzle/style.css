@@ -1,0 +1,19 @@
+p {
+    transition: background-color 0.5s color 0.5s;
+    padding: 10px;
+    font-family: sans-serif;
+}
+p:hover {
+  background-color: pink;
+  color: red
+}
+p:hover::first-letter {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: purple;
+}
+p:hover {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
