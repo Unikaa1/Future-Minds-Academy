@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            border: 2px solid black;
+            height: 200px;
+            width: 200px;
+            position: absolute;
+        }
+
+        .child {
+            border: 2px solid red;
+            height: 100px;
+            width: 100px;
+            background-color: lightpink;
+            position: fixed;
+            top: 2rem;
+            left: 5rem;
+        }
+
+        p {
+            position : absolute;   
+            top: 1rem;
+            left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+            <p>Box</p>
+        </div>
+    </div>
+</body>
+</html>

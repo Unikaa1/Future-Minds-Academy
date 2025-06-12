@@ -9,16 +9,82 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/android-chrome-192x192.png">
     <link rel="manifest" href="/site.webmanifest">
+    <style>
+body {
+    background-image:url(background.jpg);
+}
+.nav-item {
+    display: inline;
+    margin: 20px;
+    font-size: 20px;
+    color: white;
+    width: 50px;
+    height: 25px;
+    background-color: coral;
+    padding: 10px;
+    border: 2px solid darkorange;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.about {
+    width : 600px;
+    background-color: lightpink;
+    padding: 20px;
+    border: 2px solid hotpink;
+    border-radius: 10px;
+}
+.education {
+    width : 600px;
+    background-color:bisque;
+    padding: 20px;
+    border: 2px solid chocolate;
+    border-radius: 10px;
+    margin: 50px
+}
+.primary {
+    width : 600px;
+    background-color: lightblue;
+    padding: 20px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    margin: 50px
+}
+.high-school {
+    width : 600px;
+    background-color: lightgreen;
+    padding: 20px;
+    border: 2px solid green;
+    border-radius: 10px;
+    margin: 50px
+}
+.university {
+    width : 600px;
+    background-color: lightyellow;
+    padding: 20px;
+    border: 2px solid gold;
+    border-radius: 10px;
+    margin: 50px
+}
+table {
+    width: 600px;
+    background-color: lightgray;
+    padding: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    margin: 50px;
+}
+    </style>
+    
 </head>
 
 <body>
     <header>
         <h1>Personal Portfolio &#128150; &#128081;</h1>
-        <nav>
-            <li>
+        <nav class="nav">
+            <li class="nav-item">
                 <a href="projects.html" target="_blank">My projects</a>
             </li>
-            <li>
+            <li class="nav-item">
                 <a href="contacts.html" target="_blank">Contact</a>
             </li>
         </nav>
@@ -38,7 +104,8 @@
         <section class="education">
             <h2>Education &#127891;</h2>
             <ul>
-                <li> Primary School
+                <section class="primary">
+                    <li> Primary School
                     <ul>
                         <li>
                             Selami Hallaçi (2017-2022)
@@ -48,26 +115,32 @@
                         </li>
                     </ul>
                 </li>
-                <li> High School (I still haven't finished primarry school but I will go here):
+                </section>
+                <section class="high-school">
+                    <li> High School (I still haven't finished primarry school but I will go here):
                     <ul>
                         <li>
                             Don Bosko (2026-2029)
                         </li>
                     </ul>
                 </li>
-                <li> University
+                </section>
+                <section class="university">
+                    <li> University
                     <ul>
                         <li>
                             I still haven't chosen on a university but I think I will go outside of Kosovo.
                         </li>
                     </ul>
-                </li>
+                </li>   
+                </section> 
             </ul>
         </section>
         <hr>
         <section class="my-skills">
             <h2>My skills &#127775;</h2>
-            <table border="1" width="50%" <th>
+            <table border="1" width="50%" 
+            <th>
                 <td>Languages</td>
                 <td>Science</td>
                 <td>Social Studies</td>

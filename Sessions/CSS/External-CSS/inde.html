@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Blog Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .blog-container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex-direction: row;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #4F5965;
+            color: white;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .sidebar h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        .sidebar p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            color: #c0c0c0;
+        }
+        .sidebar .log-in-button {
+            background-color: #e67e22;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+        .sidebar .log-in-button:hover {
+            background-color: #d35400;
+        }
+        .main-content {
+            flex-grow: 1;
+            padding: 40px;
+        }
+        .post-section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 0.9em;
+            color: #888;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .blog-post {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        .blog-post:last-child {
+            margin-bottom: 0;
+        }
+        .post-content {
+            flex-grow: 1;
+            padding-right: 20px;
+        }
+        .post-title {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .post-meta {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .post-author {
+            margin-right: 10px;
+        }
+        .post-tag {
+            background-color: #61A16C;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.8em;
+            margin-right: 5px;
+            white-space: nowrap;
+        }
+        .post-tag.html { background-color: #3CB371; }
+        .post-tag.javascript { background-color: #F3D848; color: #333; }
+        .post-description {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #666;
+        }
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        @media (max-width: 768px) {
+            .blog-container {
+                flex-direction: column; 
+            }
+
+            .sidebar {
+                width: 100%;
+                padding: 30px 15px;
+            }
+
+            .main-content {
+                padding: 30px 20px; 
+            }
+
+            .blog-post {
+                flex-direction: column;
+                align-items: center;
+            }
+            .post-content {
+                padding-right: 0;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .author-image {
+                margin-top: 15px;
+            }
+
+            .post-meta {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="blog-container">
+        <aside class="sidebar">
+            <h1>A SAMPLE BLOG</h1>
+            <p>Lorem Ipsum dolor</p>
+            <button class="log-in-button">Log In</button>
+        </aside>
+        <main class="main-content">
+            <section class="post-section">
+                <h2 class="section-title">Pinned Post</h2>
+                <div class="blog-post">
+                    <div class="post-content">
+                        <h3 class="post-title">A pinned post</h3>
+                        <p class="post-meta">
+                            <span class="post-author">By John Doe</span> under
+                            <span class="post-tag">CSS</span>
+                            <span class="post-tag html">HTML</span>
+                        </p>
+                        <p class="post-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                            fugiat nulla pariatur.
+                        </p>
+                    </div>
+                    <img src="https://placehold.co/60x60/8844AA/FFFFFF?text=JD" alt="John Doe" class="author-image">
+                </div>
+            </section>
+            <section class="post-section">
+                <h2 class="section-title">Recent Posts</h2>
+                <div class="blog-post">
+                    <div class="post-content">
+                        <h3 class="post-title">A recent post</h3>
+                        <p class="post-meta">
+                            <span class="post-author">By Rocky Balboa</span> under
+                            <span class="post-tag javascript">JavaScript</span>
+                        </p>
+                        <p class="post-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    <img src="https://placehold.co/60x60/AA8844/FFFFFF?text=RB" alt="Rocky Balboa" class="author-image">
+                </div>
+                <div class="blog-post">
+                    <div class="post-content">
+                        <h3 class="post-title">Another recent post</h3>
+                        <p class="post-meta">
+                            <span class="post-author">By Jane Smith</span> under
+                            <span class="post-tag html">HTML</span>
+                            <span class="post-tag">CSS</span>
+                        </p>
+                        <p class="post-description">
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                            dolore eu fugiat nulla pariatur.
+                        </p>
+                    </div>
+                    <img src="https://placehold.co/60x60/44AA88/FFFFFF?text=JS" alt="Jane Smith" class="author-image">
+                </div>
+                <div class="blog-post">
+                    <div class="post-content">
+                        <h3 class="post-title">Third recent post</h3>
+                        <p class="post-meta">
+                            <span class="post-author">By Mike Johnson</span> under
+                            <span class="post-tag">Design</span>
+                        </p>
+                        <p class="post-description">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                        </p>
+                    </div>
+                    <img src="https://placehold.co/60x60/884444/FFFFFF?text=MJ" alt="Mike Johnson" class="author-image">
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Flexbox Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .card {
+            width: 100%;
+            max-width: 280px;
+            background-color: #A03232;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        
+        .card-header {
+            background-color: #333;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card-price-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .card-price {
+            font-size: 2.2em;
+            font-weight: bold;
+        }
+        .card-currency-code {
+            font-size: 0.7em;
+            color: #ccc;
+        }
+        .card-date-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .card-date-day {
+            font-size: 2.2em;
+            font-weight: bold;
+        }
+        .card-date-month {
+            font-size: 0.8em;
+            text-transform: uppercase;
+            color: #ccc;
+        }
+        .card-image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .card-image {
+            max-width: 80%;
+            height: auto;
+            display: block;
+        }
+        .card-footer {
+            background-color: #333; 
+            color: white;
+            padding: 15px 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <div class="card-price-container">
+                <span class="card-price">40c</span>
+                <span class="card-currency-code">02461</span>
+            </div>
+            <div class="card-date-container">
+                <span class="card-date-day">29</span>
+                <span class="card-date-month">JAN</span>
+            </div>
+        </div>
+
+        <div class="card-image-container">
+            <img src="lilo and stitch.jpeg" alt="lilo and stitch" class="card-image">
+        </div>
+
+        <div class="card-footer">
+            <span class="card-copyright">&copy; 2025 Lilo and Stitch</span>
+        </div>
+    </div>
+
+</body>
+</html>
